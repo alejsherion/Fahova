@@ -1,0 +1,5 @@
+﻿{
+  "urlServiceBase": "http://localhost:65500/api",
+  "urlOpheliaSecurityApi": "http://bpm-brm:9000/api",
+  "pathBase": "http://localhost:14371/index.html#!"
+}

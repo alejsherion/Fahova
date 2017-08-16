@@ -1,0 +1,53 @@
+/*Estilos globales del HTML*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Anton', sans-serif;
+}
+
+/*Modificación de los estilos bootstrap del componente QBE*/
+.QBE .dx-widget {
+  font-size: 10px;
+}
+.QBE .dx-popup-title {
+  background:-webkit-linear-gradient(#3d85c1 -1%, #3d85c1 0%, #3d85c1 0%, #3d85c1 0%, #246aaa 30%, #143b67 66%, #061128 100%, #d5ebfb 100%, #061128 100%) !important;
+  background:-moz-linear-gradient(#3d85c1 -1%, #3d85c1 0%, #3d85c1 0%, #3d85c1 0%, #246aaa 30%, #143b67 66%, #061128 100%, #d5ebfb 100%, #061128 100%) !important;
+  background:-o-linear-gradient(#3d85c1 -1%, #3d85c1 0%, #3d85c1 0%, #3d85c1 0%, #246aaa 30%, #143b67 66%, #061128 100%, #d5ebfb 100%, #061128 100%) !important;
+  background:linear-gradient(#3d85c1 -1%, #3d85c1 0%, #3d85c1 0%, #3d85c1 0%, #246aaa 30%, #143b67 66%, #061128 100%, #d5ebfb 100%, #061128 100%) !important;
+  color: white;
+}
+.QBE dx-button {
+  margin-right: 0 !important;
+  width: 100%;
+}
+.QBE .checkButtonQBE {
+  margin-top: 0 !important;
+}
+.QBE .dx-popup-title .dx-icon-close:before {
+  color: white;
+}
+.QBE .checkButtonQBE .dx-icon-check:before {
+  color: green;
+}
+.QBE .cancelButtonQBE .dx-icon-remove:before {
+  color: red;
+}
+.QBE .cleanButtonQBE .dx-icon-trash:before {
+  color: yellowgreen;
+}
+.QBE .helpButtonQBE .dx-icon-help:before {
+  color: blue;
+}
+.QBE .dx-header-row{
+  background: #296fae;
+  color: white;
+}
+.QBE dx-text-box{
+  margin-right: 10px;
+}
+.QBE .img-fluid{
+  margin: 10px;
+}
