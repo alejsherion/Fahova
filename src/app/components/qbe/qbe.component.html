@@ -17,7 +17,7 @@
   <div *dxTemplate="let data of 'content'">
     <div class="dx-fieldset m-0">
       <div class="container d-flex p-0">
-        <dx-data-grid #gridQBE [(dataSource)]="qbeEntity" [allowColumnReordering]="true" [allowColumnResizing]="true" [hoverStateEnabled]="false"
+        <dx-data-grid #gridQBE id="gridQBE" [(dataSource)]="qbeEntity" [allowColumnReordering]="true" [allowColumnResizing]="true" [hoverStateEnabled]="false"
           [showColumnLines]="true" [showRowLines]="true" [showBorders]="true" [height]="170" (onCellHoverChanged)="onGridCellHoverChanged($event)">
 
           <dxo-paging [enabled]="false"></dxo-paging>
