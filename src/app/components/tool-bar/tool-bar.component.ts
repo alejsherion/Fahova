@@ -9,8 +9,25 @@ import { APP_VERSION } from '../../core/globals'
 })
 export class ToolBarComponent implements OnInit {
 
-    @ViewChild("firstButtonTooltip")
-    private _firstButtonTooltip: NgbTooltip;
+    @ViewChild("calcButtonTooltip") private _calcButtonTooltip: NgbTooltip;
+    @ViewChild("mailButtonTooltip") private _mailButtonTooltip: NgbTooltip;
+    @ViewChild("copyButtonTooltip") private _copyButtonTooltip: NgbTooltip;
+    @ViewChild("pasteButtonTooltip") private _pasteButtonTooltip: NgbTooltip;
+    @ViewChild("printButtonTooltip") private _printButtonTooltip: NgbTooltip;
+    @ViewChild("previewButtonTooltip") private _previewButtonTooltip: NgbTooltip;
+    @ViewChild("firstButtonTooltip") private _firstButtonTooltip: NgbTooltip;
+    @ViewChild("backButtonTooltip") private _backButtonTooltip: NgbTooltip;
+    @ViewChild("lastButtonTooltip") private _lastButtonTooltip: NgbTooltip;
+    @ViewChild("forwardButtonTooltip") private _forwardButtonTooltip: NgbTooltip;
+    @ViewChild("newButtonTooltip") private _newButtonTooltip: NgbTooltip;
+    @ViewChild("editButtonTooltip") private _editButtonTooltip: NgbTooltip;
+    @ViewChild("removeButtonTooltip") private _removeButtonTooltip: NgbTooltip;
+    @ViewChild("saveButtonTooltip") private _saveButtonTooltip: NgbTooltip;
+    @ViewChild("cancelButtonTooltip") private _cancelButtonTooltip: NgbTooltip;
+    @ViewChild("qbeButtonTooltip") private _qbeButtonTooltip: NgbTooltip;
+    @ViewChild("listButtonTooltip") private _listButtonTooltip: NgbTooltip;
+    @ViewChild("viewButtonTooltip") private _viewButtonTooltip: NgbTooltip;
+    @ViewChild("refreshButtonTooltip") private _refreshButtonTooltip: NgbTooltip;
 
     @Input() initialStatus: number = PrepareToolbarStates.START;
     @Input() config: ConfigToolbar = {
@@ -91,21 +108,27 @@ export class ToolBarComponent implements OnInit {
 
     //HANDLERS=======================
     calcButtonClick() {
+        this._calcButtonTooltip.close();        
         this.onCalcButtonClick.emit();
     }
     mailButtonClick() {
+        this._mailButtonTooltip.close();
         this.onMailButtonClick.emit();
     }
     copyButtonClick() {
+        this._copyButtonTooltip.close();
         this.onCopyButtonClick.emit();
     }
     pasteButtonClick() {
+        this._pasteButtonTooltip.close();
         this.onPasteButtonClick.emit();
     }
     printButtonClick() {
+        this._printButtonTooltip.close();
         this.onPrintButtonClick.emit();
     }
     previewButtonClic() {
+        this._previewButtonTooltip.close();
         this.onPreviewButtonClick.emit();
     }
     firstButtonClick() {
@@ -113,41 +136,53 @@ export class ToolBarComponent implements OnInit {
         this.onFirstButtonClick.emit();
     }
     backButtonClick() {
+        this._backButtonTooltip.close();
         this.onBackButtonClick.emit();
     }
     forwardButtonClick() {
+        this._forwardButtonTooltip.close();
         this.onForwardButtonClick.emit();
     }
     lastButtonClick() {
+        this._lastButtonTooltip.close();
         this.onLastButtonClick.emit();
     }
 
     newButtonClick() {
+        this._newButtonTooltip.close();
         this.onNewButtonClick.emit();
     }
     removeButtonClick() {
+        this._removeButtonTooltip.close();
         this.onRemoveButtonClick.emit();
     }
     editButtonClick() {
+        this._editButtonTooltip.close();
         this.onEditButtonClick.emit();
     }
     saveButtonClick() {
+        this._saveButtonTooltip.close();
         this.onSaveButtonClick.emit();
     }
     cancelButtonClick() {
+        this._cancelButtonTooltip.close();
         this.onCancelButtonClick.emit();
     }
 
     refreshButtonClick() {
+        this._refreshButtonTooltip.close();
         this.onRefreshButtonClick.emit();
     }
     viewButtonClick() {
+        this._viewButtonTooltip.close();
         this.onViewButtonClick.emit();
     }
     listButtonClick() {
+        this._listButtonTooltip.close();
         this.onListButtonClick.emit();
     }
     qbeButtonClick() {
+        this._qbeButtonTooltip.close();
         this.onQBEButtonClick.emit();
     }
     //===============================
