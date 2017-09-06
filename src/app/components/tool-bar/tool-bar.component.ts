@@ -1,4 +1,5 @@
-﻿import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+﻿import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { APP_VERSION } from '../../core/globals'
 
 @Component({
@@ -7,6 +8,9 @@ import { APP_VERSION } from '../../core/globals'
     styleUrls: ['./tool-bar.component.css']
 })
 export class ToolBarComponent implements OnInit {
+
+    @ViewChild("firstButtonTooltip")
+    private _firstButtonTooltip: NgbTooltip;
 
     @Input() initialStatus: number = PrepareToolbarStates.START;
     @Input() config: ConfigToolbar = {
@@ -105,6 +109,7 @@ export class ToolBarComponent implements OnInit {
         this.onPreviewButtonClick.emit();
     }
     firstButtonClick() {
+        this._firstButtonTooltip.close();
         this.onFirstButtonClick.emit();
     }
     backButtonClick() {
