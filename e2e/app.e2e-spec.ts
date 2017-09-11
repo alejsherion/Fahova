@@ -1,10 +1,10 @@
-import { DwA2ClientSeedPage } from './app.po';
+import { BussinessCardPage } from './app.po';
 
-describe('dw-a2-client-seed App', () => {
-  let page: DwA2ClientSeedPage;
+describe('bussinesscard App', () => {
+  let page: BussinessCardPage;
 
   beforeEach(() => {
-    page = new DwA2ClientSeedPage();
+    page = new BussinessCardPage();
   });
 
   it('should display welcome message', () => {

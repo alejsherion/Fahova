@@ -5,7 +5,7 @@ import { HttpModule, Http } from '@angular/http';
 import { UrlSerializer } from "@angular/router";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { 
-  DxDataGridModule, DxContextMenuModule, DxPopupModule, 
+  DxDataGridModule, DxContextMenuModule, DxPopupModule, DxTabsModule, DxFormModule, DxDateBoxModule,
   DxTextBoxModule, DxSelectBoxModule, DxButtonModule, DxTooltipModule } from 'devextreme-angular';
 
 // Core
@@ -23,18 +23,24 @@ import { AuthenticatedHttpService } from './services/authenticated-http.service'
 import { LocalStorageService } from './services/local-storage.service';
 import { GetAppSettingService } from './services/get-app-setting.service';
 import { ConfigService } from './services/config.service';
+// Pages
+import { HomeComponent } from './pages/home/home.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 // Componentes
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { QBEComponent } from './components/qbe/qbe.component';
-import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
+import { TabPanelComponent } from './components/tab-panel/tab-panel.component';
+import { InfoProfileComponent } from './components/info-profile/info-profile.component';
+import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    QBEComponent,
-    ToolBarComponent
+    TabPanelComponent,
+    ProfileComponent,
+    InfoProfileComponent,
+    PersonalInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,10 @@ import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
     DxTextBoxModule,
     DxSelectBoxModule,
     DxButtonModule,
-    DxTooltipModule
+    DxTooltipModule,
+    DxTabsModule,
+    DxFormModule,
+    DxDateBoxModule
   ],
   providers: [
     {

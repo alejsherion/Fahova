@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class DwA2ClientSeedPage {
+export class BussinessCardPage {
   navigateTo() {
     return browser.get('/');
   }

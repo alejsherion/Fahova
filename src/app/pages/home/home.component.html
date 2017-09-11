@@ -1,6 +1,470 @@
-<h1>
-  DwA2ClientSeed Home..!!
-</h1>
-<app-tool-bar
-(onFirstButtonClick)="onFirstButtonClick($event)"
-></app-tool-bar>
+<div class="container container-fluid">
+
+    <body style="overflow: hidden;">
+
+
+
+        <div class="dx-gesture-cover" style="pointer-events: none; cursor: auto;"></div>
+        <div class="dx-viewport dx-device-tablet dx-device-mobile dx-device-generic dx-simulator dx-theme-generic dx-theme-generic-typography dx-color-scheme-light">
+            <div class="navbar-layout dx-layout has-navbar" data-options="dxLayout : { name: 'navbar', platform: 'generic' } ">
+
+                <div class="layout-header dx-toolbar-background dx-content-placeholder dx-content-placeholder-header dx-transition-absolute dx-transition dx-transition-header dx-transition-view-header-toolbar"
+                    data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }" data-dx-content-placeholder-name="header"
+                    data-dx-transition-type="view-header-toolbar" data-dx-transition-name="header">
+                    <div class="dx-content dx-content-header dx-transition-inner-wrapper dx-active-view" data-dx-target-placeholder-id="header"
+                        style="transition: all 0ms ease 0ms;">
+                        <div data-bind="dxToolbar: { items: [{ text: title, location: 'center' }] }" data-options="dxCommandContainer : { id: 'generic-header-toolbar' }"
+                            class="dx-toolbar dx-widget dx-visibility-change-handler dx-collection" role="toolbar">
+                            <div class="dx-toolbar-items-container">
+                                <div class="dx-toolbar-before"></div>
+                                <div class="dx-toolbar-center" style="margin: 0px auto; float: none;">
+                                    <div class="dx-item dx-toolbar-item dx-toolbar-label" style="max-width: 594.805px;">
+                                        <div class="dx-item-content dx-toolbar-item-content">
+                                            <div>Skateboard Store</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dx-toolbar-after"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layout-content dx-content-placeholder dx-content-placeholder-content dx-transition-absolute dx-transition dx-transition-content dx-transition-view-content-change"
+                    data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }" data-dx-content-placeholder-name="content"
+                    data-dx-transition-type="view-content-change" data-dx-transition-name="content">
+                    <div class="home-view dx-content dx-content-content dx-transition-inner-wrapper dx-deferrendering dx-active-view"
+                        data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="dxDeferRendering: { staggerItemSelector: '.stagger-animated', animation: 'detail-item-rendered', renderWhen: headerDataIsReady, onRendered: onContentRendered }"
+                        data-dx-target-placeholder-id="content" style="transition: all 0ms ease 0ms;">
+                        <div class="home-container">
+                            <div class="home-content">
+                                <div class="home-login">
+                                    <div class="info-panel-container">
+                                        <img class="user-photo stagger-animated" data-bind="attr: { src: userPhoto }" src="https://js.devexpress.com/Demos/DXSK8/DXSK8.OData/Images/Customers/petersmith.png"
+                                            style="transition: none;">
+                                        <div class="home-login-content stagger-animated" style="transition: none;">
+                                            Welcome back
+                                            <div class="user-name" data-bind="text: userName">Peter</div>
+                                            <div class="user-address" data-bind="text: userAddress">Atlanta, GA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="middle-content">
+                                    <hr>
+                                    <div class="info-panel-container">
+                                        <div class="panel-block stagger-animated" style="transition: none;">
+                                            <div class="panel-title">Skateboards purchased:</div>
+                                            <!--
+                            -->
+                                            <div class="panel-value"><span data-bind="text: orderCount">16</span></div>
+                                        </div>
+                                        <div class="panel-block stagger-animated" style="transition: none;">
+                                            <div class="panel-title">Current skateboard cost:</div>
+                                            <!--
+                            -->
+                                            <div class="panel-value">$<span data-bind="text: cartCost">0</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-create-button stagger-animated" style="transition: none;">
+                            <div data-bind="dxButton: { text: 'Build Your Skateboard', onClick: cartHandler }" class="dx-button dx-button-normal dx-widget dx-button-has-text"
+                                role="button" aria-label="Build Your Skateboard">
+                                <div class="dx-button-content"><span class="dx-button-text">Build Your Skateboard</span></div>
+                            </div>
+                        </div>
+                        <div class="home-create-image stagger-animated" data-bind="dxAction: cartHandler" style="transition: none;">
+                            <div class="banner-arrow"></div>
+                        </div>
+                        <div class="home-last-orders stagger-animated" style="transition: none;">
+                            <div class="partial-title">Your Previous Orders</div>
+                            <hr>
+                            <div data-options="dxViewPlaceholder: { viewName: 'OrdersPartial' }" class="dx-view-placeholder">
+                                <div data-options="dxView : { name: 'OrdersPartial' } " class="orders-partial-content dx-view"
+                                    dx-data-template-id="3">
+                                    <div style="height: 100%" data-bind="dxDeferRendering: { showLoadIndicator: true, staggerItemSelector: '.dx-list-item', animation: 'list-item-rendered', renderWhen: modelIsReady }"
+                                        class="dx-deferrendering">
+                                        <div class="orders-list dx-scrollable dx-scrollview dx-scrollable-customizable-scrollbars dx-scrollable-vertical dx-scrollable-simulated dx-visibility-change-handler dx-list dx-widget dx-collection"
+                                            data-bind="dxList: { dataSource: orders, activeStateEnabled: false, hoverStateEnabled: false }"
+                                            role="listbox">
+                                            <div class="dx-scrollable-wrapper">
+                                                <div class="dx-scrollable-container" style="touch-action: pan-x;">
+                                                    <div class="dx-scrollable-content" style="left: 0px; top: 0px; transform: none;">
+                                                        <div class="dx-scrollview-top-pocket">
+                                                            <div class="dx-scrollview-pull-down" style="display: none;">
+                                                                <div class="dx-scrollview-pull-down-image"></div>
+                                                                <div class="dx-scrollview-pull-down-indicator">
+                                                                    <div class="dx-loadindicator dx-widget">
+                                                                        <div class="dx-loadindicator-wrapper">
+                                                                            <div class="dx-loadindicator-content">
+                                                                                <div class="dx-loadindicator-icon">
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="dx-scrollview-pull-down-text">
+                                                                    <div style="opacity: 1;">Pull down to refresh...</div>
+                                                                    <div style="opacity: 0;">Release to refresh...</div>
+                                                                    <div style="opacity: 0;">Refreshing...</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dx-scrollview-content">
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Adams Pearmain + 66 6.75" Hi Raw + Sidecuts 2s</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state in-progress"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">128</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Aug 21, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Gravenstein P2 + 03 7.0" Lo Raw + Sidecuts 2s</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state in-progress"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">122</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Aug 12, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Junami P2 Swirl + 00 3.875" Hi Raw + Neon Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state in-progress"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">126</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Aug 8, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Junami P2 Swirl + 03 5.375" Lo Raw + Neon Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state in-progress"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">128</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Aug 6, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Junami P2 Swirl + 51 6.00" Hi Black + Hazard Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">137</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Aug 2, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Devonshire Quarreden + 51 6.00" Hi Black + G Bones
+                                                                            II</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state in-progress"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">157</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jul 25, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option" style="transition: none;">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">HKD Black + 66 6.75" Hi Raw + Hazard Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">130</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jul 19, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Adams Pearmain + 66 6.75" Hi Raw + G Bones II</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">150</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jul 17, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Adams Pearmain + 51 6.00" Hi Black + Hazard Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">131</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jul 14, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">HKD Black + 66 6.75" Hi Raw + Hazard Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">130</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jul 13, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Macoun Four Street + 55 6.375" Hi Raw + Dorsett Golden</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">147</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jul 1, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Macoun Four Street + 22 5.0" Hi Raw + 3DM Avila Clear</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">141</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jun 30, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">Junami P2 Swirl + 51 6.00" Hi Black + G Bones II</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">157</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jun 11, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">HKD Black + 51 6.00" Hi Black + Sidecuts 2s</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">129</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jun 7, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">HKD Black + 66 6.75" Hi Raw + G Bones II</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">150</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">Jun 4, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dx-item dx-list-item" role="option">
+                                                                <div data-options="dxTemplate : { name: 'item' }" class="dx-template-wrapper dx-item-content dx-list-item-content">
+                                                                    <div class="orders-title">
+                                                                        <div class="left order-title" data-bind="text: title">HKD Black + 51 6.00" Hi Black + Hazard Grooves</div>
+                                                                    </div>
+                                                                    <div data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state completed"></div>
+                                                                    <div class="orders-price">
+                                                                        <div>$<span data-bind="text: price">131</span></div>
+                                                                    </div>
+                                                                    <div class="right orders-date" data-bind="text: Globalize.formatDate(date, { date: 'medium' })">May 22, 2013</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dx-scrollview-bottom-pocket">
+                                                            <div class="dx-scrollview-scrollbottom" style="display: none;">
+                                                                <div class="dx-scrollview-scrollbottom-indicator">
+                                                                    <div class="dx-loadindicator dx-widget">
+                                                                        <div class="dx-loadindicator-wrapper">
+                                                                            <div class="dx-loadindicator-content">
+                                                                                <div class="dx-loadindicator-icon">
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                                                    <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="dx-scrollview-scrollbottom-text">Loading...</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical"
+                                                        >
+                                                        <div class="dx-scrollable-scroll dx-state-invisible" style="height: 153px; transform: translate(0px, 0px);">
+                                                            <div class="dx-scrollable-scroll-content"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dx-scrollview-loadpanel dx-overlay dx-widget dx-visibility-change-handler dx-state-invisible dx-loadpanel">
+                                                <div class="dx-overlay-content" aria-hidden="true" style="width: 222px; height: 90px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layout-footer">
+                    <div class="navbar-container dx-tabs dx-widget dx-visibility-change-handler dx-collection dx-navbar dx-command-container dx-tabs-expanded"
+                        data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }" role="tablist">
+                        <div class="dx-tabs-wrapper">
+                            <div class="dx-item dx-tab dx-nav-item dx-tab-selected" aria-selected="true" role="tab">
+                                <div class="dx-item-content dx-tab-content dx-nav-item-content">
+                                    <i class="dx-icon dx-icon-home"></i><span class="dx-tab-text">Home</span>
+                                </div>
+                            </div>
+                            <div class="dx-item dx-tab dx-nav-item" aria-selected="false" role="tab">
+                                <div class="dx-item-content dx-tab-content dx-nav-item-content"><i class="dx-icon dx-icon-cart"></i><span class="dx-tab-text">Build</span></div>
+                            </div>
+                            <div class="dx-item dx-tab dx-nav-item" aria-selected="false" role="tab">
+                                <div class="dx-item-content dx-tab-content dx-nav-item-content"><i class="dx-icon dx-icon-list"></i><span class="dx-tab-text">Orders</span></div>
+                            </div>
+                            <div class="dx-item dx-tab dx-nav-item" aria-selected="false" role="tab">
+                                <div class="dx-item-content dx-tab-content dx-nav-item-content"><i class="dx-icon dx-icon-user"></i><span class="dx-tab-text">Profile</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="popup-layout dx-layout dx-fast-hidden" data-options="dxLayout : { name: 'popup' }">
+                <div data-bind="dxPopup: { showTitle: false, contentTemplate: 'content', fullScreen: true, deferRendering: false, closeOnBackButton: false, showCloseButton: false }"
+                    class="popup-container dx-overlay dx-popup dx-widget dx-visibility-change-handler dx-state-invisible">
+                    <div class="dx-overlay-content dx-popup-fullscreen dx-popup-draggable dx-resizable" aria-hidden="true" style="width: 100%; height: 100%;">
+                        <div class="dx-popup-content">
+                            <div data-options="dxTemplate: { name: 'content' }" class="child-controller-content dx-template-wrapper">
+                                <div class="simple-layout dx-layout dx-fast-hidden" data-options="dxLayout : { name: 'simple', platform: 'generic' } ">
+                                    <div class="layout-header dx-toolbar-background dx-content-placeholder dx-content-placeholder-header dx-transition-absolute dx-transition dx-transition-header dx-transition-view-header-toolbar"
+                                        data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }"
+                                        data-dx-content-placeholder-name="header" data-dx-transition-type="view-header-toolbar"
+                                        data-dx-transition-name="header"></div>
+
+                                    <div class="layout-content dx-content-placeholder dx-content-placeholder-content dx-transition-absolute dx-transition dx-transition-content dx-transition-view-content-change"
+                                        data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }"
+                                        data-dx-content-placeholder-name="content" data-dx-transition-type="view-content-change"
+                                        data-dx-transition-name="content"></div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/html" id="item-template">
+            <div class="image" data-bind="ifnot: isEmpty, visible: typeof isEmpty != 'undefined' && !isEmpty(), dxAction: selectItem">
+                <img data-bind="attr: { src: DXSK8.db.getImage(model().image), alt: model().name }" />
+                <div class="item-price">$<span data-bind="text: model().price "></span></div>
+            </div>
+            <div class="no-image" data-bind="if: isEmpty, visible: typeof isEmpty == 'undefined' || isEmpty(), dxAction: selectItem">
+                <img src="images/plus.png" />
+                <div>
+                    <span data-bind="text: selectItemText"></span>
+                </div>
+            </div>
+        </script>
+        <script type="text/html" id="lookup-title">
+            <div class="countries-title">Choose country</div>
+        </script>
+        <script type="text/html" id="address-template">
+            <div class="dx-field">
+                <div class="dx-field-label">Country</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxLookup: { value: country, dataSource: countries, searchEnabled: false, title: 'Choose country', onOpened: $root.showLookup, fullScreen: $root.isPhone, usePopover: !$root.isPhone, showCancelButton: true, placeholder: '', titleTemplate: $('#lookup-title') }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Zip Code</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxNumberBox: { value: zipCode, placeholder: 'Enter code' }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">State</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextBox: { value: state }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">City</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextBox: { value: city }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Address</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextArea: { value: address }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Phone</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextBox: { value: phoneNumber }"></div>
+                </div>
+            </div>
+        </script>
+        <div style="display: none; visibility: hidden;">
+            <script type="text/javascript" src="https://d1pdqivtki74if.cloudfront.net/dx-analytics.js" async="null"></script>
+            <script>
+                var intervalDXA = setInterval(function () { window.dxa && (clearInterval(intervalDXA), window.analytics = new window.dxa.Analytic("https://pjl6i2ero9.execute-api.us-east-1.amazonaws.com/prod/put"), window.analytics.addCookieToSave("DXVisitor"), window.analytics.pageVisited()) }, 300);
+            </script>
+        </div>
+    </body>
+</div>

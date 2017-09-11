@@ -1,0 +1,18 @@
+.home-login-content {
+    display: inline-block;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    vertical-align: top;
+    text-align: left;
+}
+.user-photo{
+    border-radius: 50%;
+}
+
+.user-name{
+    font-size: xx-large;
+    color: blue;
+}
+.home-content{
+    width: 100%;
+}
